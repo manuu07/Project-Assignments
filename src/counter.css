@@ -1,0 +1,18 @@
+.container {
+  margin:auto;
+  margin-top: 200px;
+  width:50%;
+  border: 5px solid green;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(235, 248, 221);
+}
+
+.container button {
+  margin :5px;
+  padding:10px;
+  background-color: white;
+  border: none ;
+  border-radius: 7px;
+}
