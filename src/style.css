@@ -1,0 +1,39 @@
+body{
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    margin:0;
+    padding:0;
+
+}
+h1{
+    font-size:70px;
+    text-decoration:underline;
+    font-family:cursive;
+    font-family: 'Alegreya', serif;
+   font-family: 'Dancing Script', cursive;
+}
+
+
+header {
+    padding: 1rem 0;
+  }
+  
+  .main-content {
+    margin-top: 2rem;
+  }
+  
+  .book {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+  
+  .book-detail {
+    padding: 0 2rem;
+  }
+  
+  .book-price {
+    font-weight: bold;
+    font-size: 140%;
+  }
