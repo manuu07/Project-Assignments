@@ -1,4 +1,4 @@
-## Problem Statement=>
+## Problem Statement
 
 ## Hint:You Will have to Self Explore cron jobs in Nodejs,For this Assignment
 
@@ -24,5 +24,5 @@ The trigger function (API) must accept the text as input, sleep for the duration
  }
 ]
  
-## So, the script must go through this list and for each event item, hit NodeJS scheduler API asking it to schedule the event (let us say event 1) to trigger the function at “2020-07-10 15:00:00.000”. The function must take the text as param (textOne) sleep for (7 seconds) and return/console log (enotxet)
+ So, the script must go through this list and for each event item, hit NodeJS scheduler API asking it to schedule the event (let us say event 1) to trigger the function at “2020-07-10 15:00:00.000”. The function must take the text as param (textOne) sleep for (7 seconds) and return/console log (enotxet)
 
