@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './style.css';
+import ShowList from './ShowList';
+import Summary from './Summary';
+import MovieForm from './Form';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const GetData = () => {
+    const [showData, setShowData] = useState([]);
+    const showList = async () => {
+        try {
+            let options = {
+                method: 'get',
+                url: 'https://api.tvmaze.com/search/shows?q=all'
+            }
+            let result = await axios(options);
+            //console.log(result.data);
+            if (result.data.length > 0) {
+                setShowData(result.data);
+            }
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+    useEffect(() => {
+        showList();
+    }, []);
+
+    return { showData }
 }
 
-export default App;
+const Shows = () => {
+    const { showData } = GetData();
+    return <>
+        <ShowList showData={showData} />
+    </>
+}
+
+const ShowSummary = () => {
+    const { showData } = GetData();
+    return <>
+        <Summary showData={showData} />
+    </>
+}
+
+const Form = () => {
+    const { showData } = GetData();
+    return <>
+        <MovieForm showData={showData} />
+    </>
+}
+
+
+export { Shows, ShowSummary, Form };
